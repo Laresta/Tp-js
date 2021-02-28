@@ -1,0 +1,30 @@
+TP 3
+
+Objectif principal
+
+Convertir le code JS classique actuel en code JS JQuery
+
+Faire un appel AJAX au flux suivant :
+
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0');
+var yyyy = today.getFullYear();
+today = yyyy + '-' + dd + '-' + mm;
+
+var url = 'http://newsapi.org/v2/everything?q=minecraft&from='+ today +'&sortBy=publishedAt&apiKey=9b4e42c6404c48cab0f04cb200654d6c&pageSize=5';
+
+Une fois cela fait, il faudra log la réponse.
+Pour chaque article contenu dans la réponse de la requête AJAX précédente, il faut ajouter un article dans la section #news.
+Mettre en place un système d’onglet
+Onglet 1 “Article & recherche” : dédié à la recherche de texte au sein des news (la recherche n’a pas à être opérationnel) ainsi qu’à l’affichage des news (il s’agit de la section news actuel)
+Onglet 2 “Ajouter un article” : dédié à la création de news (il s’agit du formulaire actuel)
+Lorsque l’on clic sur le label d’un article il faut cacher l’autre onglet. Vous pouvez soit développer le système vous même ou alors utiliser un plugin jQuery.
+
+Objectif bonus
+
+NB
+L’expression “le log” fait référence à la méthode logMEssage(message) du fichier log.js
+
+A rendre
+A la fin du tp un dossier nommé “TP3 Nom1-Nom2”
