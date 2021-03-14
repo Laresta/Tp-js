@@ -1,0 +1,24 @@
+{
+  "name": "tp4",
+  "version": "1.0.0",
+  "description": "Tp 4 du cours de JavaScript",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tp"
+  ],
+  "author": "Larestaa",
+  "license": "ISC",
+  "dependencies": {
+    "grunt": "^1.3.0",
+    "grunt-cli": "^1.3.2",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^4.0.0",
+    "grunt-contrib-uglify": "^5.0.0",
+    "jquery": "^3.6.0",
+    "vue": "^2.6.12"
+  }
+}

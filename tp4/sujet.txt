@@ -1,0 +1,11 @@
+Utiliser npm et Grunt pour
+  installation de jquery dans le dossier /dist/js  /
+  concaténation + uglify de vos fichiers javascript pour créer le fichier app.min.js dans le dossier /dist/js /
+  minification du code css présent dans le fichier style.css en style.min.css /
+
+Installer vuejs via npm  /
+
+Créer un composant vuejs "news" qui permettra d'afficher une news comme elle est actuellement affichée /
+      prise en charge de l’événement lorsque l’on clique sur le bouton “View detail” /
+
+Remplacer le code permettant d'afficher les news en JS pour les afficher en vuejs via le composant précédemment créé /
