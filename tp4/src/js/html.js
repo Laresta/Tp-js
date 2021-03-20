@@ -33,7 +33,9 @@ function addError(message, parent){
 
 function viewdetailClick(){
     let p = $(this).parent().children('p');
-    logMessageWithDate(p.html());
+    let title = $(this).parent().children('.title');
+    changeCouleurPlusLogDateWithDate(p.html() , title.html());
+
 }
 
 function changementOnglet(nameClass){
@@ -50,4 +52,17 @@ function changementOnglet(nameClass){
         document.querySelector('div.AjoutArticle').hidden=false;
         break;
     }
+}
+function changeCouleurPlusLogDateWithDate(message, titre){
+    logMessageWithDate(message);
+    let c = document.querySelectorAll(".title");
+    for (let i=0; i<c.length; i++) {
+        if (c[i].textContent == titre){
+            c[i].style.color = VERT;
+        }
+        else{
+          c[i].style.color = ROUGE
+        }
+    }
+    return false;
 }

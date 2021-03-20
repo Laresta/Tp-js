@@ -19,6 +19,6 @@
     "grunt-contrib-cssmin": "^4.0.0",
     "grunt-contrib-uglify": "^5.0.0",
     "jquery": "^3.6.0",
-    "vue": "^2.6.12"
+    "vue": "^3.0.7"
   }
 }

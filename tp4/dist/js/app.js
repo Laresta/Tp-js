@@ -120,7 +120,9 @@ function addError(message, parent){
 
 function viewdetailClick(){
     let p = $(this).parent().children('p');
-    logMessageWithDate(p.html());
+    let title = $(this).parent().children('.title');
+    changeCouleurPlusLogDateWithDate(p.html() , title.html());
+
 }
 
 function changementOnglet(nameClass){
@@ -137,6 +139,19 @@ function changementOnglet(nameClass){
         document.querySelector('div.AjoutArticle').hidden=false;
         break;
     }
+}
+function changeCouleurPlusLogDateWithDate(message, titre){
+    logMessageWithDate(message);
+    let c = document.querySelectorAll(".title");
+    for (let i=0; i<c.length; i++) {
+        if (c[i].textContent == titre){
+            c[i].style.color = VERT;
+        }
+        else{
+          c[i].style.color = ROUGE
+        }
+    }
+    return false;
 }
 
 function logMessageWithDate(message){
@@ -168,15 +183,6 @@ function iterate(){
 			logMessageWithDate(BLEU); 
 	}
 }
-var app = {
-  data() {
-  return {
-    test : 'ahhh'
-  }
-}
-};
-Vue.createApp(app).mount('#ah');
-
 const Articles = {
   data() {
     let articles = JSON.parse(ALLNEWSJSON);
@@ -188,16 +194,16 @@ const Articles = {
 
 const newsTemplate = `<article>
 			              <h3 class="title">{{ article.title }}</h3>
-			              <button @click="log(article.description)">View detail</button>
+                    <p> {{article.description}} </p>
+			              <button @click="viewdetailClick(article.description , article.title)">View detail</button>
 		              </article>`;
 
 const newsComponent = {
   props: ['article'],
   template: newsTemplate,
   methods: {
-    log: logMessageWithDate
+    viewdetailClick: changeCouleurPlusLogDateWithDate
   }
 };
-
 
 Vue.createApp(Articles).component('news', newsComponent).mount('#news');
