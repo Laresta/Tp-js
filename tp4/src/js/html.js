@@ -57,7 +57,7 @@ function changeCouleurPlusLogDateWithDate(message, titre){
     logMessageWithDate(message);
     let c = document.querySelectorAll(".title");
     for (let i=0; i<c.length; i++) {
-        if (c[i].textContent == titre){
+        if (c[i].textContent === titre){
             c[i].style.color = VERT;
         }
         else{
